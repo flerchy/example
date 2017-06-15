@@ -2,14 +2,14 @@ import unittest
 from troposphere.config import SourceDetails, ONE_HOUR
 
 
-def SourceDetails(self):
+def eadf_SourceDetails(self):
     SourceDetails(
         EventSource="esource",
         MaximumExecutionFrequency=ONE_HOUR,
         MessageType="mtype",
     ).to_dict()
 
-def SourceDetailsMaximumExecutionFrequency(self):
+def new_source_DetailsMaximumExecutionFrequency(self):
     with self.assertRaises(ValueError):
         SourceDetails(
             EventSource="esource",
